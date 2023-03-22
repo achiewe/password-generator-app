@@ -1,0 +1,578 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-grey:#24232C;
+    --grey:#817D92;
+    --almost-white:#E6E5EA;
+    --very-dark-grey:#18171F;
+    --neon-green:#A4FFAF;
+    --red:#F64A4A;
+    --orange:#FB7C58;
+    --yellow:#F8CD65;
+    --black:#08070B;
+}
+
+body{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--black);
+    gap:16px;
+}
+
+.header-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+}
+
+.header{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: center;   
+    color:var(--grey);
+}
+
+.password-generate{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:343px;
+    background-color: var(--dark-grey);
+    padding:0 16px;
+}
+
+#top-div{
+    width:100%;
+    height:64px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#password-view{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    color:var(--almost-white);
+    opacity: 0.25;
+}
+
+.icon-copy{
+    width:17.5px;
+    height:20px;
+}
+
+.main-card{
+    width:343px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grey);
+    padding:16px 0;
+    margin-bottom: 63px;
+}
+
+.main-div{
+    width:311px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:32px;
+}
+
+#length-input{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:13px;
+}
+
+.title-number{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#length-title{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: left;
+    color:var(--almost-white);
+}
+
+#length-number{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    color:var(--neon-green);
+}
+
+#input-div{
+    width:100%;
+}
+
+.slider-range{
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background:var(--very-dark-grey);
+    outline: none;
+}
+
+.slider-range[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    border-radius: 20px;
+    margin-top: -2px; 
+    background-color: var(--almost-white);
+    height: 28px;
+    width: 28px;  
+    cursor: pointer;
+}
+
+.checkbox-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:16px;
+}
+
+.checkbox-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+}
+
+.input-regex{
+    appearance: none;
+    width:20px;
+    height:20px;
+    border: 2px solid var(--almost-white);
+    cursor: pointer;
+}
+
+.input-regex:checked{
+    appearance: none;
+    background-color: var(--neon-green);
+    background-image: url("./assets/images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-size: 13px 10px;
+    background-position: center;
+}
+
+.label-input{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: left;
+    color:var(--almost-white);
+}
+
+.strength-button{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+}
+
+.strength-password{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very-dark-grey);
+    height:56px;
+    padding-left:16px;
+    padding-right: 14px;
+}
+
+.strength-password h3{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: center;
+    color:var(--grey);
+}
+
+#strength-levels{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:16px;
+}
+
+#strength-quality{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: right;
+    color:var(--almost-white);
+}
+
+#strength-types{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+}
+
+.too-weak{
+    background-color: var(--red);
+}
+
+.weak{
+    background-color: var(--orange);
+}
+
+.medium{
+    background-color: var(--yellow);
+}
+
+.strong{
+    background-color: var(--neon-green);
+}
+
+.box1, .box2, .box3, .box4{
+    width:10px;
+    height:28px;
+    border: 2px solid var(--almost-white);
+}
+
+#generate-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+    width:100%;
+    height:56px;
+    background-color: var(--neon-green);
+    border: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: center;
+    color:var(--dark-grey);
+    cursor:pointer;
+}
+
+.icon-arrow{
+    width:11.11px;
+    height:12px;
+}
+
+
+
+
+
+
+
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+/* tablet and desktop version*/
+
+
+@media screen and (min-width:768px){
+
+    body{
+        gap:24px;
+    }
+
+    .header-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 133px;
+    }
+    
+    .header{
+        font-family:'JetBrains Mono', monospace;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: right;
+        color:var(--grey);
+    }
+
+    .password-generate{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width:540px;
+        background-color: var(--dark-grey);
+        padding:0 32px;
+    }
+    
+    #top-div{
+        width:100%;
+        height:80px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    #password-view{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: 0px;
+        text-align: left;
+        color:var(--almost-white);
+        opacity: 0.25;
+    }
+    
+    .icon-copy{
+        width:21px;
+        height:24px;
+    }
+
+    .main-card{
+        width:540px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--dark-grey);
+        padding:32px 0;
+        margin-bottom: 196px;
+    }
+    
+    .main-div{
+        width:476px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap:32px;
+    }
+
+    #length-input{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap:25px;
+    }
+    
+    .title-number{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #length-title{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0px;
+        text-align: left;
+        color:var(--almost-white);
+    }
+
+    #length-number{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: left;
+        color:var(--neon-green);
+    }
+    
+    #input-div{
+        width:100%;
+    }
+    
+    .slider-range{
+        appearance: none;
+        width: 100%;
+        height: 8px;
+        border-radius: 5px;
+        background:var(--very-dark-grey);
+        outline: none;
+    }
+    
+    .slider-range[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none; 
+        appearance: none;
+        border-radius: 20px;
+        margin-top: -2px; 
+        background-color: var(--almost-white);
+        height: 28px;
+        width: 28px;  
+        cursor: pointer;
+    }
+    
+    .checkbox-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap:19px;
+    }
+
+    .checkbox-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap:24px;
+    }
+    
+    .input-regex{
+        appearance: none;
+        width:20px;
+        height:20px;
+        border: 2px solid var(--almost-white);
+        cursor: pointer;
+    }
+    
+    .input-regex:checked{
+        appearance: none;
+        background-color: var(--neon-green);
+        background-image: url("./assets/images/icon-check.svg");
+        background-repeat: no-repeat;
+        background-size: 13px 10px;
+        background-position: center;
+    }
+
+    .label-input{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0px;
+        text-align: left;
+        color:var(--almost-white);
+    }
+    
+    .strength-button{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:32px;
+    }
+    
+    .strength-password{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--very-dark-grey);
+        height:72px;
+        padding:0 32px;
+    }
+    
+    .strength-password h3{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0px;
+        text-align: center;
+        color:var(--grey);
+    }
+    
+    #strength-levels{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:16px;
+    }
+    
+    #strength-quality{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: right;
+        color:var(--almost-white);
+    }
+    
+    #strength-types{
+        display: flex;
+        flex-direction: row;
+        gap:8px;
+    }
+
+    #generate-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:24px;
+        width:100%;
+        height:65px;
+        background-color: var(--neon-green);
+        border: none;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0px;
+        text-align: center;
+        color:var(--dark-grey);
+        cursor:pointer;
+    }
+    
+    .icon-arrow{
+        width:11.11px;
+        height:12px;
+    }
+}
