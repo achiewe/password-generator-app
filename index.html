@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <title> Password generator app</title>
+</head>
+
+<body>
+  <header class="header-div">
+    <h1 class="header">
+      Password Generator
+    </h1>
+  </header>
+
+  <div class="password-generate">
+    <div id="top-div">
+      <p id="password-view">
+        P4$5W0rD!
+      </p>
+      <img class="icon-copy" src="./assets/images/icon-copy.svg" alt="icon copy">
+    </div>
+  </div>
+  <main class="main-card">
+    <div class="main-div">
+      <div id="length-input">
+        <div class="title-number">
+          <h3 id="length-title">
+            Character Length
+          </h3>
+          <h3 id="length-number">
+            0
+          </h3>
+        </div>
+        <div id="input-div" for="slider">
+          <input id="slider" class="slider-range" type="range" value="1" min="1" max="5" step="1">
+        </div>
+      </div>
+      <div class="checkbox-container">
+        <div class="checkbox-div">
+          <input type="checkbox" id="check-uppercase" class="input-regex" value="uppercase">
+          <label class="label-input" for="check-uppercase"> Include Uppercase Letters</label>
+        </div>
+        <div class="checkbox-div">
+          <input type="checkbox" id="check-lowercase" class="input-regex" value="lowercase">
+          <label class="label-input" for="check-lowercase"> Include Lowercase Letters</label>
+        </div>
+        <div class="checkbox-div">
+          <input type="checkbox" id="check-number" class="input-regex" value="number">
+          <label class="label-input" for="check-number"> Include Numbers</label>
+        </div>
+        <div class="checkbox-div">
+          <input type="checkbox" id="check-symbols" class="input-regex" value="symbols">
+          <label class="label-input" for="check-symbols"> Include Symbols</label>
+        </div>
+      </div>
+      <div class="strength-button">
+        <div class="strength-password">
+          <h3>
+            STRENGTH
+          </h3>
+          <div id="strength-levels">
+              <p id="strength-quality">
+              </p>
+            <div id="strength-types">
+              <div class="box1"></div>
+              <div class="box2"></div>
+              <div class="box3"></div>
+              <div class="box4"></div>
+            </div>
+          </div>
+        </div>
+        <button id="generate-button">
+          GENERATE 
+          <img class="icon-arrow" src="./assets/images/icon-arrow-right.svg" alt="icon-arrow">
+        </button>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js"> </script>
+</body>
+
+</html>
